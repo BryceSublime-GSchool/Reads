@@ -3,5 +3,11 @@ extends ../layout
 block content
   h1 authors index
     each author in authors
-      h2 #{author.authorFirst}
+      h2 
+        a(href="/authors/#{author.id}") #{author.authorFirst} #{author.authorSecond}
+      img(src="#{author.authorImg}")
+      p.authBio #{author.authorBio}
+
+      
+      
   

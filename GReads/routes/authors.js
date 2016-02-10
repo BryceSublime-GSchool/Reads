@@ -22,5 +22,22 @@ router.post('/', function(req, res, next) {
   })
 });
 
+router.get('/:id', function(req, res, next){
+  Authors().where('id', req.params.id).first().then(function(author){
+    res.render('authors/show', {author: author})
+ })
+})
+router.get('/:id/edit', function(req, res, next){
+  Authors().where('id', req.params.id).first().then(function(result){
+    res.render('authors/edit', {authors: result})
+ })
+})
+
+router.post('/:id/delete', function(req, res, next){
+  Authors().where('id', req.params.id).del().then(function(results){
+    res.redirect('/authors')
+  })
+})
+
 
 module.exports = router;

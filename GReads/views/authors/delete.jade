@@ -2,7 +2,7 @@ extends ../layout
 
 block content
   h1 authors Edit
-  form(action="/authors/#{authors.id}" method="POST")
+  form(action="/authors/#{authors.id}/delete" method="POST")
     input(type="text" placeholder="Author First Name" name="authorFirst" value="#{authors.authorFirst}")
     input(type="text" placeholder="Author Last Name" name="authorSecond" value="#{authors.authorSecond}")
     textarea(type="text" placeholder="Author Bio" name="authorBio")
