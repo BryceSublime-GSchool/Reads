@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
     table.string('genre');
     table.text('description');
     table.string('bookImg');
-
+    table.integer('auth_id')
   })
 };
 
