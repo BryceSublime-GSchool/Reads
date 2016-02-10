@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    margin: 0px;
+  margin: 0px;
 }
 
 a {
@@ -35,10 +35,56 @@ a {
   height: 80%;
   width: 160px;
   background-color: blue;
+  margin-right: 10px;
 }
-.bookholder{
+.resultsHolder{
   position: absolute;
-  height: 100px;
-  width:100px;
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  height: 85vh;
+  background-color: pink;
+  left: 25%;
+  overflow-y: scroll;
+  margin-left: 10px;
+
+}
+.bookHolder{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  width:900px;
   overflow: hidden;
+  padding: 25px;
+  background-color: white;
+  margin: 20px;
+
+}
+
+.info{
+  margin-left: 15px;
+}
+#reftitle{
+  position: relative;
+  position: relative;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+}
+#genre{
+  position: relative;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  right: 0px;
+  width: 20px;
+  height: 20px;
+}
+#cover{
+  height: 175px;
+  width: 120px;
+}
+.authorBox{
+  margin-right: 150px;
+  width: 200px;
 }
