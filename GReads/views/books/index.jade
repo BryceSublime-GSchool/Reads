@@ -4,12 +4,12 @@ block content
   h1 books
   for book in books
     div.bookHolder
-      a(href="/books/#{book.id}") #{book.title}
+      a(href="/books/#{book.id}" id="reftitle") #{book.title}
       h2 #{book.genre}
       img(src="#{book.bookImg}")
       p.bookBio #{book.description}
-      h2
-        a(href="/authors/#{book.auth_id}") Author
+      h2 written by: 
+        a(href="/authors/#{book.auth_id}") #{authors.authorFirst} #{authors.authorSecond}
 
           
         

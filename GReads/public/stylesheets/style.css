@@ -1,8 +1,44 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0px;
 }
 
 a {
   color: #00B7FF;
+}
+
+.bookBrowse{
+  height: 400px;
+  width: 550px;
+  background-color: #2E4076;
+  margin: 10px
+}
+
+.authorBrowse{
+  height: 400px;
+  width: 550px;
+  background-color: #4466D2;
+  margin: 10px;
+}
+
+.frontMenu{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  top: 250px;
+}
+
+.sidemenu{
+  position: absolute;
+  height: 80%;
+  width: 160px;
+  background-color: blue;
+}
+.bookholder{
+  position: absolute;
+  height: 100px;
+  width:100px;
+  overflow: hidden;
 }

@@ -33,7 +33,10 @@ router.post('/', function(req, res, next) {
 
 router.get('/:id', function(req, res, next){
   Books().where('id', req.params.id).first().then(function(books){
-    res.render('books/show', {books: books})
+    Authors().select().then(function(authors){
+      res.render('books/show', {books: books, authors: authors})
+
+    })
  })
 })
 
