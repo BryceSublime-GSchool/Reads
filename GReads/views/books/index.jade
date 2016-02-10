@@ -2,12 +2,15 @@ extends ../layout
 
 block content
   h1 books
-    each book in books
-      h2 
-        a(href="/books/#{book.id}") 
+  for book in books
+    div.bookHolder
+      a(href="/books/#{book.id}") #{book.title}
+      h2 #{book.genre}
       img(src="#{book.bookImg}")
-      p.authBio #{book.description}
+      p.bookBio #{book.description}
+      h2
+        a(href="/authors/#{book.auth_id}") Author
 
-      
-      
+          
+        
   

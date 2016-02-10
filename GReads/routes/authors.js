@@ -12,9 +12,7 @@ router.get('/', function(req, res, next) {
   })
 });
 router.get('/new', function(req, res, next) {
-  Authors().select().then(function(results){
     res.render('authors/new');
-  })
 });
 router.post('/', function(req, res, next) {
   Authors().insert(req.body).then(function(results){
@@ -33,11 +31,20 @@ router.get('/:id/edit', function(req, res, next){
  })
 })
 
+router.post('/:id', function(req, res, next){
+  Authors().where('id', req.params.id).update(req.body).then(function(results){
+    res.redirect('/authors/'+ req.params.id)
+  })
+})
+
+
 router.post('/:id/delete', function(req, res, next){
   Authors().where('id', req.params.id).del().then(function(results){
     res.redirect('/authors')
   })
 })
+
+
 
 
 module.exports = router;

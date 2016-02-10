@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  h1 #{books.title} 
+  h1 #{books.genre} 
+  img(src="#{books.bookImg}")
+  p.authBio #{books.description}
+  form(action="/books/#{books.id}/delete" method="POST")       
+    button(type="submit") Delete
+   
+  form(action="/books/#{books.id}/edit" method="GET")
+    button(type="submit") Edit
