@@ -62,7 +62,6 @@ a {
   flex-direction: column;
   width: 700px;
   height: 85vh;
-
   left: 25%;
   overflow-y: scroll;
   /*margin-left: 10px;*/
@@ -128,7 +127,18 @@ a {
   display: flex;
   flex-direction: column;
 }
+.indexMenu{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 100px;
+  top: 150px;
 
+}
+
+#bigboy{
+  margin: 10px;
+}
 .forme{
   display: flex;
   flex-direction: row;
