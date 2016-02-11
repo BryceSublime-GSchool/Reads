@@ -10,11 +10,11 @@ block content
     p#reftitle #{books.title} 
     p#genre #{books.genre} 
     p#description #{books.description}
-  div.buttons
-  form(action="/books/#{books.id}/delete" method="POST")       
-    button(type="submit") Delete
-  form(action="/books/#{books.id}/edit" method="GET")
-    button(type="submit") Edit
+  div.forme
+    form(action="/books/#{books.id}/delete" method="POST")       
+      button(type="submit") Delete
+    form(action="/books/#{books.id}/edit" method="GET")
+      button(type="submit") Edit
     //- 
       //- 
       //- extends ../layout

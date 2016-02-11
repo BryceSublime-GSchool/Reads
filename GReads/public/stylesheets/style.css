@@ -119,9 +119,7 @@ a {
   flex-direction: row;
   width: 200px;
 }
-button{
-  margin: 25px;
-}
+
 .layout{
   display: flex;
   flex-direction: row;
@@ -131,6 +129,10 @@ button{
   flex-direction: column;
 }
 
+.forme{
+  display: flex;
+  flex-direction: row;
+}
 #addAuth{
   margin-top: 10px;
 }

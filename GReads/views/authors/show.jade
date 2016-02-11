@@ -8,8 +8,8 @@ block content
   h1 #{author.authorFirst} #{author.authorSecond}
   img(id="coverHead" src="#{author.authorImg}")
   p.authBio #{author.authorBio}
-  form(action="/authors/#{author.id}/delete" method="POST")       
-    button(type="submit") Delete
-   
-  form(action="/authors/#{author.id}/edit" method="GET")
-    button(type="submit") Edit
+  div.forme
+    form(action="/authors/#{author.id}/delete" method="POST")       
+      button(type="submit") Delete
+    form(action="/authors/#{author.id}/edit" method="GET")
+      button(type="submit") Edit
