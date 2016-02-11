@@ -1,21 +1,23 @@
 extends ../layout
 
 block content
+  a(href="/books") <-- back to All Books
   h1 Books New
-  form(action="/books" method="POST")
-    input(type="text" placeholder="Book Title" name="title")
-    br
-    input(type="text" placeholder="Book Genre" name="genre")
-    br
-    textarea(type="text" placeholder="Book Description" name="description")
-    br
-    input(type="text" placeholder="Book Image URL" name="bookImg")
-    br
-    select(name="auth_id")
-      each author in authors
-        option(value="#{author.id}") #{author.authorFirst} #{author.authorSecond}
-    br
-    input(id="submit" type="submit")
+  div.former
+    form(action="/books" method="POST")
+      input(type="text" placeholder="Book Title" name="title")
+      br
+      input(type="text" placeholder="Book Genre" name="genre")
+      br
+      textarea(type="text" placeholder="Book Description" name="description")
+      br
+      input(type="text" placeholder="Book Image URL" name="bookImg")
+      br
+      select(name="auth_id")
+        each author in authors
+          option(value="#{author.id}") #{author.authorFirst} #{author.authorSecond}
+      br
+      input(id="submit" type="submit")
 
 
   

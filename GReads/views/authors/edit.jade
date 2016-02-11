@@ -1,10 +1,15 @@
 extends ../layout
 
 block content
-  h1 authors Edit
-  form(action="/authors/#{authors.id}" method="POST")
-    input(type="text" placeholder="Author First Name" name="authorFirst" value="#{authors.authorFirst}")
-    input(type="text" placeholder="Author Last Name" name="authorSecond" value="#{authors.authorSecond}")
-    //- textarea(type="text" placeholder="Author Bio" name="authorBio" value="#{authors.authorBio}")
-    input(type="text" placeholder="Author Image URL" name="authorImg" value="#{authors.authorImg}")
-    input(id="submit" type="submit")
+  a(href="/authors") <-- All Authors
+  h1  Edit #{authors.authorFirst} #{authors.authorSecond}
+  div.former
+    form(action="/authors/#{authors.id}" method="POST")
+      input(type="text" placeholder="Author First Name" name="authorFirst" value="#{authors.authorFirst}")
+      br
+      input(type="text" placeholder="Author Last Name" name="authorSecond" value="#{authors.authorSecond}")
+      br
+      //- textarea(type="text" placeholder="Author Bio" name="authorBio" value="#{authors.authorBio}")
+      input(type="text" placeholder="Author Image URL" name="authorImg" value="#{authors.authorImg}")
+      br
+      input(id="submit" type="submit")

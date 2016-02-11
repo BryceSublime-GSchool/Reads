@@ -4,10 +4,14 @@ block content
   h1 Galvanize Reads
   div.layout
     div.sidePiece
+      a(href="/authors")
+       img(id="addAuth" src="https://s3-us-west-2.amazonaws.com/testphotosnoobish/allauth.png")
       a(href="/authors/new")
        img(id="addAuth" src="https://s3-us-west-2.amazonaws.com/testphotosnoobish/Author.png")
       a(href="/books/new")
        img(id="addAuth" src="https://s3-us-west-2.amazonaws.com/testphotosnoobish/books.png")
+      a(href="/books")
+       img(id="addAuth" src="https://s3-us-west-2.amazonaws.com/testphotosnoobish/allbooks.png")
     div.resultsAuthor
       each author in authors
         div.bookHolder

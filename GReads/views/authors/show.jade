@@ -1,7 +1,10 @@
 extends ../layout
 
 block content
-  a(href="/Authors") <-- Back to Authors
+  a(href="/authors") <-- back to Authors
+  br
+  br
+  a(href="/books") <-- back to Books
   h1 #{author.authorFirst} #{author.authorSecond}
   img(id="coverHead" src="#{author.authorImg}")
   p.authBio #{author.authorBio}

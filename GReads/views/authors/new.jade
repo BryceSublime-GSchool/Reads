@@ -1,13 +1,19 @@
 extends ../layout
 
 block content
-  h1 authors new
-  form(action="/authors" method="Post")
-    input(type="text" placeholder="Author First Name" name="authorFirst")
-    input(type="text" placeholder="Author Last Name" name="authorSecond")
-    textarea(type="text" placeholder="Author Bio" name="authorBio")
-    input(type="text" placeholder="Author Image URL" name="authorImg")
-    input(id="submit" type="submit")
+  a(href="/authors") <-- back to All Authors
+  h1 Add an Author
+  div.former
+    form(action="/authors" method="Post")
+      input(type="text" placeholder="Author First Name" name="authorFirst")
+      br
+      input(type="text" placeholder="Author Last Name" name="authorSecond")
+      br
+      textarea(type="text" placeholder="Author Bio" name="authorBio")
+      br
+      input(type="text" placeholder="Author Image URL" name="authorImg")
+      br
+      input(id="submit" type="submit")
 
 
     

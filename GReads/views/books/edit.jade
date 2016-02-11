@@ -1,16 +1,24 @@
 extends ../layout
 
 block content
-  h1 Books Edit
-  form(action="/books/#{books.id}" method="POST")
-    input(type="text" placeholder="Book Title" name="title" value="#{books.title}")
-    input(type="text" placeholder="Book Genre" name="genre" value="#{books.genre}")
-    //- textarea(type="text" placeholder="Book Description" name="description" value="#{books.description}")
-    input(type="text" placeholder="Book Image URL" name="bookImg" value="#{books.bookImg}")
-    select(name="auth_id")
-      each author in authors
-        option(value="#{author.id}") #{author.authorFirst}
-    input(id="submit" type="submit")
+  a(href="/authors") <-- All Authors
+  br
+  br
+  h1 Edit #{books.title}
+  div.former
+    form(action="/books/#{books.id}" method="POST")
+      input(type="text" placeholder="Book Title" name="title" value="#{books.title}")
+      br
+      input(type="text" placeholder="Book Genre" name="genre" value="#{books.genre}")
+      br
+      //- textarea(type="text" placeholder="Book Description" name="description" value="#{books.description}")
+      input(type="text" placeholder="Book Image URL" name="bookImg" value="#{books.bookImg}")
+      br
+      select(name="auth_id")
+        each author in authors
+          option(value="#{author.id}") #{author.authorFirst}
+      br
+      input(id="submit" type="submit")
 
 
   
