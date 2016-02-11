@@ -9,12 +9,12 @@ block content
         div.info
           p#reftitle #{books.title} 
           p#genre #{books.genre} 
-          p.authBio #{books.description}
-    form(action="/books/#{books.id}/delete" method="POST")       
-    button(type="submit") Delete
-    
-    form(action="/books/#{books.id}/edit" method="GET")
-    button(type="submit") Edit
+          p#description #{books.description}
+        div.buttons
+          form(action="/books/#{books.id}/delete" method="POST")       
+            button(type="submit") Delete
+          form(action="/books/#{books.id}/edit" method="GET")
+            button(type="submit") Edit
       //- 
       //- 
       //- extends ../layout

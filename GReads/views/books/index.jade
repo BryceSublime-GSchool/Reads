@@ -3,9 +3,9 @@ extends ../layout
 block content
   h1 Galvanize Reads
   div.sidemenu
+    div.bookCreate
   div.resultsHolder
     for book in books
-      div.bookHolder
         div.cover
           img(id="cover" src="#{book.bookImg}")
         div.info

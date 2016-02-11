@@ -1,13 +1,18 @@
 extends ../layout
 
 block content
-  h1 authors index
+  h1 Galvanize Reads
+  div.sidemenu
+    div.bookCreate
+  div.resultsHolder
     each author in authors
-      h2 
-        a(href="/authors/#{author.id}") #{author.authorFirst} #{author.authorSecond}
-      img(src="#{author.authorImg}")
-      p.authBio #{author.authorBio}
+      div.bookHolder
+        div.cover
+          img(id="coverHead" src="#{author.authorImg}")
+        div.info
+          a(id="reftitle" href="/authors/#{author.id}") #{author.authorFirst} #{author.authorSecond}
+
 
       
-      
-  
+    
+    

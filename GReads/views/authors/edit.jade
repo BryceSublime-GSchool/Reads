@@ -5,6 +5,6 @@ block content
   form(action="/authors/#{authors.id}" method="POST")
     input(type="text" placeholder="Author First Name" name="authorFirst" value="#{authors.authorFirst}")
     input(type="text" placeholder="Author Last Name" name="authorSecond" value="#{authors.authorSecond}")
-    //- textarea(type="text" placeholder="Author Bio" name="authorBio" vlue)
-    //- input(type="text" placeholder="Author Image URL" name="authorImg")
+    //- textarea(type="text" placeholder="Author Bio" name="authorBio" value="#{authors.authorBio}")
+    input(type="text" placeholder="Author Image URL" name="authorImg" value="#{authors.authorImg}")
     input(id="submit" type="submit")
