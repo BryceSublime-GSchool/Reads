@@ -1,8 +1,9 @@
 extends ../layout
 
 block content
+  a(href="/Authors") <-- Back to Authors
   h1 #{author.authorFirst} #{author.authorSecond}
-  img(src="#{author.authorImg}")
+  img(id="coverHead" src="#{author.authorImg}")
   p.authBio #{author.authorBio}
   form(action="/authors/#{author.id}/delete" method="POST")       
     button(type="submit") Delete

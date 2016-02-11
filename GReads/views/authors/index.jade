@@ -2,17 +2,21 @@ extends ../layout
 
 block content
   h1 Galvanize Reads
-  div.sidemenu
-    div.bookCreate
-  div.resultsHolder
-    each author in authors
-      div.bookHolder
-        div.cover
-          img(id="coverHead" src="#{author.authorImg}")
-        div.info
-          a(id="reftitle" href="/authors/#{author.id}") #{author.authorFirst} #{author.authorSecond}
+  div.layout
+    div.sidePiece
+      a(href="/authors/new")
+       img(id="addAuth" src="https://s3-us-west-2.amazonaws.com/testphotosnoobish/Author.png")
+      a(href="/books/new")
+       img(id="addAuth" src="https://s3-us-west-2.amazonaws.com/testphotosnoobish/books.png")
+    div.resultsAuthor
+      each author in authors
+        div.bookHolder
+          div.cover
+            img(id="coverHead" src="#{author.authorImg}")
+          div.info
+            a(id="reftitle" href="/authors/#{author.id}") #{author.authorFirst} #{author.authorSecond}
 
 
-      
+    
     
     

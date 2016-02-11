@@ -1,21 +1,21 @@
 extends ../layout
 
 block content
-    div.sidemenu
-    div.resultsHolder
-      div.bookHolder
-        div.cover
-          img(id="cover" src="#{books.bookImg}")
-        div.info
-          p#reftitle #{books.title} 
-          p#genre #{books.genre} 
-          p#description #{books.description}
-        div.buttons
-          form(action="/books/#{books.id}/delete" method="POST")       
-            button(type="submit") Delete
-          form(action="/books/#{books.id}/edit" method="GET")
-            button(type="submit") Edit
-      //- 
+  a(href="/books") <-- Back to Books
+  br
+  br
+  h1 Galvanize Reads
+  img(id="cover" src="#{books.bookImg}")
+  div.info
+    p#reftitle #{books.title} 
+    p#genre #{books.genre} 
+    p#description #{books.description}
+  div.buttons
+  form(action="/books/#{books.id}/delete" method="POST")       
+    button(type="submit") Delete
+  form(action="/books/#{books.id}/edit" method="GET")
+    button(type="submit") Edit
+    //- 
       //- 
       //- extends ../layout
       //- 
